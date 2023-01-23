@@ -1,0 +1,59 @@
+Questoes
+
+1) e)
+
+2) d)
+
+3) c)
+
+4) d)
+
+5) d)
+
+6)
+A função recebe um inteiro n e uma lista v e utiliza de duas listas auxiliares p e q para copiar os elementos da lista v de forma inversa para a lista p, percorrendo v com um laço for invertido, usando do ponteiro de lista q para armazenar o ponteiro da última atualização de p, retornando q no final.
+
+7) d)
+
+8)
+TipoDado encontraElementoMeio(Nodo* lista) {
+
+    Nodo *ptAuxIda, *ptAuxVolta;
+
+    ptAuxIda = lista;
+
+    ptAuxVolta = lista;
+    while(ptAuxVolta) {
+
+       ptAuxVolta = ptAuxVolta->prox;
+
+    }
+
+    while(ptAuxIda->dado != ptAuxVolta->dado || ptAuxIda != ptAuxVolta->ant) {
+
+       ptAuxIda = ptAuxIda->prox;
+
+       ptAuxVolta = ptAuxVolta->ant;
+
+    }
+
+    return ptAuxIda->dado;
+
+}
+
+9)
+int funcao (TipoDFila *f){
+
+    TipoInfo x,y;
+    int c = 0;
+
+    x = ConsultaFila (f);
+    while (!VaziaFila (f)) {
+
+       y = ConsultaFila(f);
+       RemoverFila (&f, &y);
+       if (x==y)
+         c++;
+    }
+    return c;
+}
